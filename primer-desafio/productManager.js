@@ -19,8 +19,8 @@ class ProductManager {
         }
 
         if (this.products.some((existingProduct) => existingProduct.code === product.code)) {
-            console.error("Producto existente con el mismo código");
-            return "Producto existente con el mismo código";
+            console.error("Ya existe un producto con el mismo código");
+            return "Ya existe un producto con el mismo código";
         }
 
         let id = (this.getProducts()).length;
