@@ -1,1 +1,92 @@
-[{"title":"producto actualizado","description":"descripcion del producto actualizado","price":400,"thumbnail":"sin imagen","code":"zxy 321","stock":4,"id":1},{"title":"Producto para el auto ","description":"Este es un producto para el auto","price":200,"thumbnail":"Sin imagen","code":"abc123","stock":25,"id":2},{"title":"Producto Estelar","description":"El producto más destacado de nuestra tienda","price":600,"thumbnail":"Sin imagen","code":"xyz789","stock":10,"id":3},{"title":"Oferta Especial","description":"¡Precio rebajado por tiempo limitado!","price":150,"thumbnail":"Sin imagen","code":"special001","stock":15,"id":4},{"title":"Producto Elegante","description":"Elegancia y estilo en un solo producto","price":350,"thumbnail":"Sin imagen","code":"chic456","stock":8,"id":5},{"title":"Kit de Inicio","description":"Todo lo que necesitas para empezar","price":120,"thumbnail":"Sin imagen","code":"start123","stock":20,"id":6},{"title":"Producto Premium","description":"Calidad premium para clientes exigentes","price":500,"thumbnail":"Sin imagen","code":"premium777","stock":5,"id":7},{"title":"Producto Deportivo","description":"Perfecto para los entusiastas del deporte","price":180,"thumbnail":"Sin imagen","code":"sporty321","stock":12,"id":8},{"title":"Producto Tecnológico","description":"Última tecnología en tus manos","price":300,"thumbnail":"Sin imagen","code":"tech999","stock":7,"id":9},{"title":"Producto para el Hogar","description":"Hace que tu hogar sea aún más acogedor","price":250,"thumbnail":"Sin imagen","code":"home456","stock":15,"id":10}]
+[
+    {
+        "title": "producto actualizado",
+        "description": "descripcion del producto actualizado",
+        "price": 400,
+        "thumbnail": "sin imagen",
+        "code": "zxy 321",
+        "stock": 4,
+        "id": 1
+    },
+    {
+        "title": "Producto para el auto ",
+        "description": "Este es un producto para el auto",
+        "price": 200,
+        "thumbnail": "Sin imagen",
+        "code": "abc123",
+        "stock": 25,
+        "id": 2
+    },
+    {
+        "title": "Producto Estelar",
+        "description": "El producto más destacado de nuestra tienda",
+        "price": 600,
+        "thumbnail": "Sin imagen",
+        "code": "xyz789",
+        "stock": 10,
+        "id": 3
+    },
+    {
+        "title": "Oferta Especial",
+        "description": "¡Precio rebajado por tiempo limitado!",
+        "price": 150,
+        "thumbnail": "Sin imagen",
+        "code": "special001",
+        "stock": 15,
+        "id": 4
+    },
+    {
+        "title": "Producto Elegante",
+        "description": "Elegancia y estilo en un solo producto",
+        "price": 350,
+        "thumbnail": "Sin imagen",
+        "code": "chic456",
+        "stock": 8,
+        "id": 5
+    },
+    {
+        "title": "Kit de Inicio",
+        "description": "Todo lo que necesitas para empezar",
+        "price": 120,
+        "thumbnail": "Sin imagen",
+        "code": "start123",
+        "stock": 20,
+        "id": 6
+    },
+    {
+        "title": "Producto Premium",
+        "description": "Calidad premium para clientes exigentes",
+        "price": 500,
+        "thumbnail": "Sin imagen",
+        "code": "premium777",
+        "stock": 5,
+        "id": 7
+    },
+    {
+        "title": "Producto Deportivo",
+        "description": "Perfecto para los entusiastas del deporte",
+        "price": 180,
+        "thumbnail": "Sin imagen",
+        "code": "sporty321",
+        "stock": 12,
+        "id": 8
+    },
+    {
+        "title": "Producto Tecnológico",
+        "description": "Última tecnología en tus manos",
+        "price": 300,
+        "thumbnail": "Sin imagen",
+        "code": "tech999",
+        "stock": 7,
+        "id": 9
+    },
+    {
+        "title": "Producto para el Hogar",
+        "description": "Hace que tu hogar sea aún más acogedor",
+        "price": 250,
+        "thumbnail": "Sin imagen",
+        "code": "home456",
+        "stock": 15,
+        "id": 10
+    }
+]

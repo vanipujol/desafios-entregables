@@ -1,8 +1,7 @@
-/**
+*
  * Module dependencies.
  * @typedef {import("express")} express
  * @typedef {import("./ProductManager.js").ProductManager} ProductManager
- */
 
 import express from "express";
 import {ProductManager} from "./ProductManager.js";

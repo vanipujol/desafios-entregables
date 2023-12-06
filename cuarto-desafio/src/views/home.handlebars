@@ -1,15 +1,21 @@
 <div>
     <div>
-        <p>Todo listo para trabajar con WebSockets</p>
+        <p> Listado de productos </p>
     </div>
-    <label>Ingrese texto aqui</label>
-    <input type="text" id="chat-input" name="chat-input">
-    <button id="send-button" >Enviar</button>
-    <p id="input-message"></p>
-
-    <div id="chat-container">
-        <ul id="chat-messages"></ul>
+    <div>
+        <ul>
+            {{#each products}}
+                <li>
+                    <strong>Producto:</strong> {{title}}
+                    <strong>Descripción:</strong> {{description}}
+                    <strong>Código:</strong> {{code}}
+                    <strong>Precio:</strong> ${{price}}
+                    <strong>Stock:</strong> {{stock}}
+                    <strong>Categoría:</strong> {{category}}
+                    <strong>Id:</strong> {{id}}
+                    <strong>Estado:</strong> {{status}}
+                </li>
+            {{/each}}
+        </ul>
     </div>
 </div>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/js/index.js"></script>
