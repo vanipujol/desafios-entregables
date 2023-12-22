@@ -4,7 +4,8 @@ const collection = "carts";
 
 const productSchemaCart  = new mongoose.Schema({
     productId: String,
-    quantity: Number
+    quantity: Number,
+    _id: false
 })
 
 const cartSchema = new mongoose.Schema({
