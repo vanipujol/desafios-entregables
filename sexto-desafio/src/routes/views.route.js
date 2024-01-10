@@ -38,7 +38,7 @@ router.get('/',privateAccess, (req,res)=>{
  * @param {object} res - Express response object.
  * @returns {Promise<void>} - Renders the 'home' view with a list of products.
  */
-router.get("/", async (req,res)=> {
+router.get("/", privateAccess, async (req,res)=> {
     const products = await productManager.getProductsByHome()
 
     res.render("home",{products})
@@ -53,7 +53,7 @@ router.get("/", async (req,res)=> {
  * @param {object} res - Express response object.
  * @returns {Promise<void>} - Renders the 'products' view with the paginated list of products.
  */
-router.get('/products', async (req, res) => {
+router.get('/products', privateAccess, async (req, res) => {
     try {
         const { limit, page, sort, category, availability, query} = req.query
 
@@ -78,7 +78,7 @@ router.get('/products', async (req, res) => {
  * @param {object} res - Express response object.
  * @returns {Promise<void>} - Renders the 'productDetails' view with details of the specified product.
  */
-router.get('/products/:productId', async (req, res) => {
+router.get('/products/:productId', privateAccess, async (req, res) => {
     const { productId } = req.params;
 
     try {
@@ -105,7 +105,7 @@ router.get('/products/:productId', async (req, res) => {
  * @param {object} res - Express response object.
  * @returns {Promise<void>} - Renders the 'carts' view with details of the specified shopping cart.
  */
-router.get('/carts/:cartId', async (req, res) => {
+router.get('/carts/:cartId', privateAccess, async (req, res) => {
     const { cartId } = req.params;
 
     try {
