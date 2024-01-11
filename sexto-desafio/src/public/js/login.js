@@ -15,9 +15,10 @@ form.addEventListener("submit", e =>{
         }
     }).then(result=>{
         if(result.status===200){
-            window.location.replace('/')
+            window.location.replace('/products')
         }else{
             console.log(result);
+            alert("Contraseña o usuario incorrecto")
         }
     })
 

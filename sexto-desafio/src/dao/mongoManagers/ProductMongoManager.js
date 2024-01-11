@@ -77,7 +77,6 @@ class ProductManagerMongo {
         }
     };
 
-
     /**
      * Retrieves all products from the database.
      * @returns {Promise<Array>} A promise that resolves to an array of products.

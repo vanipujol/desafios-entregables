@@ -8,6 +8,13 @@ router.post("/register", async (req,res)=>{
 
    const exists = await userModel.findOne({email});
 
+    if (!first_name || !last_name || !email || !age || !password) {
+        return res.status(400).send({
+            status: "error",
+            error: "Todos los campos son obligatorios",
+        });
+    }
+
    if(exists){
     return res.status(400)
     .send({
@@ -40,15 +47,23 @@ router.post("/login", async (req,res)=>{
             error:"Datos incorrectos"
         })
     }
+
+    let role = "usuario";
+
+    if (user.email === "adminCoder@coder.com" && user.password === "adminCod3r123") {
+        role = "admin";
+    }
+
     req.session.user = {
         full_name: `${user.first_name} ${user.last_name}`,
         email: user.email,
-        age: user.age
+        age: user.age,
+        role: role
     }
     res.send({
         status:"success",
         payload: req.session.user,
-        message:"Mi primer Login!!"
+        message:"Mi primer login!"
     })
 })
 

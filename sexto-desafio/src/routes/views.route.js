@@ -6,12 +6,29 @@ const router = Router();
 const productManager = new ProductManagerMongo()
 const cartManager = new CartManagerMongo()
 
+/**
+ * Middleware to allow access only to non-authenticated users.
+ * Redirects authenticated users to the home page.
+ *
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const publicAccess = (req,res,next) =>{
     if(req.session.user){
         return res.redirect('/');
     }
     next();
 }
+
+/**
+ * Middleware to allow access only to authenticated users.
+ * Redirects non-authenticated users to the login page.
+ *
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ * @param {Function} next - Express next middleware function.
+ */
 const privateAccess = (req,res,next) =>{
     if(!req.session.user){
         return res.redirect('/login');
@@ -19,29 +36,38 @@ const privateAccess = (req,res,next) =>{
     next();
 }
 
+/**
+ * Route for rendering the registration page.
+ * Accessible only to non-authenticated users.
+ *
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ */
 router.get('/register', publicAccess, (req,res)=>{
     res.render('register')
 });
+
+/**
+ * Route for rendering the login page.
+ * Accessible only to non-authenticated users.
+ *
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
+ */
 router.get('/login', publicAccess, (req,res)=>{
     res.render('login')
 })
-router.get('/',privateAccess, (req,res)=>{
-    res.render('products', {user:req.session.user})
-})
 
 /**
- * Route to render the home page with a list of products.
- * @name GET /
- * @function
- * @memberof module:routes
- * @param {object} req - Express request object.
- * @param {object} res - Express response object.
- * @returns {Promise<void>} - Renders the 'home' view with a list of products.
+ * Route for rendering the home page.
+ * Accessible only to authenticated users.
+ *
+ * @param {Object} req - Express request object.
+ * @param {Object} res - Express response object.
  */
-router.get("/", privateAccess, async (req,res)=> {
+router.get('/',privateAccess, async (req, res) => {
     const products = await productManager.getProductsByHome()
-
-    res.render("home",{products})
+    res.render('home', {products, user: req.session.user})
 })
 
 /**
@@ -62,7 +88,7 @@ router.get('/products', privateAccess, async (req, res) => {
 
         // Render the products view with the obtained list
 
-        res.render('products',  {products});
+        res.render('products',  {products, user:req.session.user});
     } catch (error) {
         console.error('Error fetching products:', error.message);
         res.status(500).send('Internal Server Error');

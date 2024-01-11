@@ -4,9 +4,10 @@
     <title>Lista de productos</title>
 </head>
 <body>
-<div>
-    <p> Bienvenido, {{user.full_name}}</p>
+<div class="div-container">
+    <p> Bienvenido, <strong>{{user.full_name}}</strong></p>
     <p>{{user.email}}</p>
+    <p> rol: <strong>{{user.role}}</strong></p>
     <a href="/api/sessions/logout"><button>Salir</button></a>
 </div>
 <h1>Lista de productos</h1>
