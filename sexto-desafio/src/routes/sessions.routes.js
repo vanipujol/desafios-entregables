@@ -2,11 +2,10 @@ import { Router } from "express";
 import userModel from "../dao/models/users.model.js";
 
 const router = Router();
+router.post("/register", async (req, res) => {
+    const { first_name, last_name, email, age, password } = req.body;
 
-router.post("/register", async (req,res)=>{
-   const { first_name, last_name, email, age, password } = req.body;
-
-   const exists = await userModel.findOne({email});
+    const exists = await userModel.findOne({ email });
 
     if (!first_name || !last_name || !email || !age || !password) {
         return res.status(400).send({
@@ -15,27 +14,27 @@ router.post("/register", async (req,res)=>{
         });
     }
 
-   if(exists){
-    return res.status(400)
-    .send({
-        status:"error",
-        error:"El usuario ya existe"
-    })
-   }
-   const user = {
+    if (exists) {
+        return res.status(400).send({
+            status: "error",
+            error: "El usuario ya existe",
+        });
+    }
+
+    const user = {
         first_name,
         last_name,
         email,
         age,
-        password
-    }
+        password,
+    };
 
     let result = await userModel.create(user);
     res.send({
-        status:"success",
-        message:"Usuario registrado"
-    })
-})
+        status: "success",
+        message: "Usuario registrado",
+    });
+});
 
 router.post("/login", async (req,res)=>{
     const {email, password} = req.body;

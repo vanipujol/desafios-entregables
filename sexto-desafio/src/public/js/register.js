@@ -13,11 +13,13 @@ form.addEventListener('submit', e=>{
             "Content-Type":"application/json"
         }
     }).then(result=>result.json()).then(result=>{
-        if(result.status===200){
+        if(result.status==="success"){
             console.log(result)
+            alert("Usuario registrado exitosamente")
+
         }else{
             console.log(result);
-            alert("Debes ingresar todos los campos")
+            alert("Ha ocurrido un error. Usuario existente o debes ingresar todos los campos")
         }
     })
 })
