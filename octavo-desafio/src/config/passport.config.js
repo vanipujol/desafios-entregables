@@ -4,10 +4,12 @@ import GitHubStrategy from "passport-github2";
 
 import {createHash, validatePassword} from "../utils.js";
 import userModel from "../dao/models/users.model.js";
+import usersModel from "../dao/models/users.model.js";
+import cartsModel from "../dao/models/carts.model.js";
 
 const LocalStrategy = local.Strategy;
 
-const inicializePassport = () => {
+const initializePassport = () => {
 
     passport.use("register", new LocalStrategy(
         {passReqToCallback: true, usernameField: "email"},
@@ -18,20 +20,27 @@ const inicializePassport = () => {
                 let user = await userModel.findOne({email: username});
                 if (user) {
                     console.log('User already registered');
-                    return done(null, false)
+                    return done(null, false);
                 }
+
+                const newCart = new cartsModel({ products: [] });
+                await newCart.save();
+
+                console.log('New Cart:', newCart);
+
                 const newUser = {
                     first_name,
                     last_name,
                     email,
                     age,
+                    cart: newCart._id,
                     password: createHash(password)
                 }
                 const result = await userModel.create(newUser);
                 return done(null, result);
 
             } catch (error) {
-                return done(error)
+                return done(error);
             }
 
         }));
@@ -58,13 +67,10 @@ const inicializePassport = () => {
     });
 
     passport.deserializeUser(async (id, done) => {
-        try {
-            let user = await userModel.findById(id).populate("cart");
-            done(null, user);
-        } catch (error) {
-            done(error);
-        }
+        let user = await userModel.findById(id).populate("cart");
+        done(null, user);
     });
+
 
     passport.use('github', new GitHubStrategy({
         clientID: "Iv1.f417e35954ad029e",
@@ -103,4 +109,4 @@ const inicializePassport = () => {
     }))
 }
 
-export default inicializePassport;
+export default initializePassport;

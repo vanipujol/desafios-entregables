@@ -86,7 +86,7 @@ router.get('/products', privateAccess, async (req, res) => {
 
         // Render the products view with the obtained list
 
-        res.render('products',  {products, user:req.session.user});
+        res.render('products',  {products, user:req.session.user });
     } catch (error) {
         console.error('Error fetching products:', error.message);
         res.status(500).send('Internal server error');

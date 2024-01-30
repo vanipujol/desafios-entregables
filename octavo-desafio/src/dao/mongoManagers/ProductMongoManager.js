@@ -43,7 +43,6 @@ class ProductManagerMongo {
 
         const products = await productsModel.paginate(filter, options);
 
-        console.log(products)
         const queryParams = {
             limit,
             page: products.hasPrevPage && products.prevPage,
@@ -83,7 +82,6 @@ class ProductManagerMongo {
      */
     getProductsByHome = async () => {
         const products = await productsModel.find().lean();
-        console.log(products);
         return products;
     };
 

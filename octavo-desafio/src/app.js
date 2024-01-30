@@ -12,7 +12,7 @@ import passport from "passport";
 import viewRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
 import sessionRouter from "./routes/sessions.routes.js";
-import inicializePassport from "./config/passport.config.js";
+import initializePassport from "./config/passport.config.js";
 
 const PORT = 8080;
 const app = express();
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname + "/public"));
 
-inicializePassport()
+initializePassport()
 app.use(session({
     store: new MongoStore({
         mongoUrl: MONGO,
