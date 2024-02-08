@@ -15,7 +15,6 @@ export default class ViewsController {
         }
         next();
     }
-
     static async renderRegister(req, res) {
         res.render('register');
     }

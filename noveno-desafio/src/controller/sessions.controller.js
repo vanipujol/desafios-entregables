@@ -11,7 +11,6 @@ class SessionsController {
         console.log('Registration failure');
         res.send({error: 'Registration failure'});
     }
-
     static async login(req, res) {
         if (!req.user) {
             return res.status(400).send({status: "error"});
@@ -98,5 +97,4 @@ class SessionsController {
         });
     }
 }
-
 export default SessionsController;

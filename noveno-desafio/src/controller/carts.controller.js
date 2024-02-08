@@ -62,7 +62,6 @@ class CartController {
             });
         }
     }
-
     static async addProductToCart(req, res) {
         try {
             const cid = req.params.cid;
@@ -198,5 +197,4 @@ class CartController {
         }
     }
 }
-
 export default CartController;
