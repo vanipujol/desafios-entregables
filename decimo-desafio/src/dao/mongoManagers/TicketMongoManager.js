@@ -102,7 +102,7 @@ export class TicketManagerMongo {
             if (!cart) {
                 return `The cart with the id was not found: ${cartId}`;
             }
-
+            console.log(cart)
             const code = crypto.randomUUID();
             let created_at = "";
             let amount = 0;

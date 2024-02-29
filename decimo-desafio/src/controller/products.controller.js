@@ -37,7 +37,7 @@ class ProductController {
 
             if (typeof product === "string") {
                 CustomError.createError({
-                    name: "No se logro obtener el producto",
+                    name: "Could not obtain the product",
                     cause: productErrorOptions.generateGetProductByIdError(productId),
                     message: product,
                     errorCode: ERRORS.PRODUCT_ERROR
@@ -57,7 +57,7 @@ class ProductController {
             const createdProduct = await productService.addProduct(req.body);
             if (typeof createdProduct === "string") {
                 CustomError.createError({
-                    name: "No se logro agregar el producto",
+                    name: "The product could not be added",
                     cause: productErrorOptions.generateAddProductError(),
                     message: createdProduct,
                     errorCode: ERRORS.PRODUCT_ERROR
