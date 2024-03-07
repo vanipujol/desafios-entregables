@@ -1,0 +1,23 @@
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"warning","message":"User already registered"}
+{"level":"error","message":"Error getting product details:"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"error","message":"LoggerTestController.loggerTest.error is not a function"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
