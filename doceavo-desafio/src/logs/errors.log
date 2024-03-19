@@ -1,0 +1,49 @@
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"warning","message":"User already registered"}
+{"level":"error","message":"Error getting product details:"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"error","message":"LoggerTestController.loggerTest.error is not a function"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"fatal","message":"Testing fatal logger"}
+{"level":"error","message":"Testing error logger"}
+{"level":"warning","message":"Testing warning logger"}
+{"level":"info","message":"Testing info logger"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Could not update the product"}
+{"level":"error","message":"Could not update the product"}
+{"level":"error","message":"Could not update the product"}
+{"level":"error","message":"Could not add product to cart"}
+{"level":"error","message":"Could not add product to cart"}
+{"level":"error","message":"Could not add product to cart"}
+{"level":"error","message":"Could not add product to cart"}
+{"level":"error"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}
+{"level":"error","message":"Unable to delete product"}

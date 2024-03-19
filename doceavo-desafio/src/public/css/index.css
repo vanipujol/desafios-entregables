@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.div-container {
+    max-width: 320px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form {
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    max-width: 300px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: rgba(121, 76, 175, 0.75);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(121, 76, 175, 0.9);
+}
+ul{
+    list-style-type: none;
+}
+
+p {
+    margin-top: 5px;
+}
+
+a {
+    color: rgba(121, 76, 175, 0.75);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.textColor{
+    color: rgba(121, 76, 175, 0.75);
+}
+
+.textDarkColor{
+    color: rgba(86, 13, 173, 0.92);
+    font-size: 13px;
+}
+
+.github-button-container {
+    text-align: center;
+}
+
+ .github-button {
+     display: inline-block;
+     padding: 8px 10px;
+     text-align: center;
+     font-size: 14px;
+     background-color: rgba(255, 255, 255, 0.57);
+     color: rgba(30, 34, 38, 0.61);
+     border: 1px solid rgba(30, 34, 38, 0.61);
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+.github-button i {
+    margin-right: 4px;
+    font-size: 16px;
+}
+
+.github-button:hover {
+    background-color: rgba(30, 34, 38, 0.84);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 4px 0;
+    display: inline-block;
+    width: 45%;
+}
